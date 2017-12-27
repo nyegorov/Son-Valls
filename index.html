@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Son Valls</title>
+	<link rel="stylesheet" href="styles.css" type="text/css" />
+	<script type="text/javascript" src="scripts/jquery.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnguGGHU8WbMPWVP2_-UwUUFpgCTWpP7A"></script>
+	<script type="text/javascript" src="scripts.js"></script>
+    <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnguGGHU8WbMPWVP2_-UwUUFpgCTWpP7A&callback=initMap"></script>-->
+</head>
+
+<body>
+
+<div class="menu" align="center">
+	<div class="menubar desktop">
+		<a href="#dasoil">Das Olivenöl</a>
+		<a href="#diesorte">Die Sorte</a>
+		<a href="#herkunft">Die Herkunft</a>
+		<a href="#eigen">Eigenschaften</a>
+		<a href="#quellen">Bezugsquellen</a>
+		<a href="#kontakt">Kontakt</a>
+	</div>
+	<div class="menubar mobile">
+	    <div class="rollup"  onclick="showmenu(true)">Menü</div>
+		<div class="rolldown">
+		    <div class="menuclose" onclick="showmenu(false)">Schliessen</div>
+			<div class="menucontent">
+				<a href="#dasoil" onclick="showmenu(false)">Das Olivenöl</a><br>
+				<a href="#diesorte" onclick="showmenu(false)">Die Sorte</a><br>
+				<a href="#herkunft" onclick="showmenu(false)">Die Herkunft</a><br>
+				<a href="#eigen" onclick="showmenu(false)">Eigenschaften</a><br>
+				<a href="#quellen" onclick="showmenu(false)">Bezugsquellen</a><br>
+				<a href="#kontakt" onclick="showmenu(false)">Kontakt</a>
+			</div>
+			<a href="/impressum.html" class="menufooter" onclick="showmenu(false)">Impressum</a>
+		</div>
+	</div>
+</div>
+
+<div class="content">
+	<div id="header">
+		<h1>Son Valls</h1>
+		<h2>Oli d’Oliva Verge Extra</h2>
+	</div>
+
+	<div class="entry gallery">
+		<!--<div id="bottle" ><img src="images/bottle.jpg"></img></div>-->
+		<div class="gallery_nav">
+			<img class="prev" src="images/arrow_gallery_left.svg"></img>
+			<img class="next" src="images/arrow_gallery.svg"></img>
+		</div>
+		<img id="bottle" src="images/bottle.jpg"></img>
+	</div>
+
+	<div class="entry" id="dasoil">
+		<h1>DAS OLIVENÖL:</h1>
+		<h2>Wir machen keine Wissenschaft aus unseren Oliven, sondern einfach sehr, sehr gutes Öl.</h2>
+		<p>Für dieses reinsortige Jahrgangsöl 2017 wurden ausgesuchte Arbequina Oliven früh geerntet und binnen drei Stunden nach der Ernte kalt extrahiert. 
+		Die sofortige Verarbeitung unter Luftabschluss verhindert die Bildung freier Fettsäuren und schützt die wertvollen ungesättigten Fettsäuren und 
+		aromatischen Verbindungen (Polyphenole). <br>
+		Einheiten: 0,5 l und 0,75 l.<br>
+		Die dunkle Flasche schützt das Öl vor Oxidation durch Licht.</p>
+		<img src="images/branch.png"></img>
+	</div>
+
+
+	<div class="entry" id="diesorte">
+		<h1>DIE SORTE:</h1>
+		<h2>Die Sorte Arbequina:<br>edle Herkunft, edler Geschmack.</h2>
+	</div>
+
+	<div class="entry" id="diesorte2">
+		<p></p>
+		<img src="images/bg.jpg"></img>
+		<img src="images/branch_bottom.png"></img>
+		<div class="desktop">
+			<p>Die Olivensorte Arbequina gilt als die Königin der Olivensorten in Katalonien. Der Legende nach entführte jedoch König Jaume I, König von Aragonien, 
+			Katalonien und Valencia im 13. Jahrhundert, die Olivenbäume aus Mallorca nach Katalonien. Glauben wir gerne. Denn die kleinste aller spanischen 
+			Olivensorten wiegt zwar nur ein, zwei Gramm, ist dafür aber umso robuster, ertragreicher und vorzüglicher im Geschmack.<br>
+			<br>
+			Son Valls, Ernte 2017, besticht durch seine Dichte, Klarheit und leuchtend grüne Farbe. Frucht und Schärfe sind fein ausbalanciert – mit Noten von 
+			frisch geschnittenem Gras, Artischocke und Tomate.</p>
+		</div>
+		<div class="mobile">
+			<p>Die kleinste aller spanischen Olivensorten wiegt zwar nur ein, zwei Gramm, ist dafür aber umso robuster, ertragreicher und vorzüglicher im Geschmack.<br>
+			Son Valls, Ernte 2017, besticht durch seine Dichte, Klarheit und leuchtend grüne Farbe. Frucht und Schärfe sind fein ausbalanciert – mit Noten von 
+			frisch geschnittenem Gras, Artischocke und Tomate.</p>
+		</div>
+	</div>
+
+	<div class="entry" id="herkunft">
+		<img src="images/mallorca_map.svg"></img>
+		<h1>DIE HERKUNFT:</h1>
+		<h2>Heimat der Son Valls Olivenhaine:<br>
+		Porreres im südlichen Zentralraum von Mallorca.</h2>
+	</div>
+	<div class="entry" id="eigen">
+		<h1>DIE EIGENSCHAFTEN:</h1>
+		<h2>Voller Charakter. Gesunde Wirkung.</h2>
+		<p>Schon in der Antike wussten Ägypter, Griechen und Römer um die positive Wirkung des Olivenöls. So senkt der hohe Anteil an 
+		ungesättigten Fettsäuren das Cholesterin und schützt das Herz. Der hohe Anteil an Vitamin E wehrt zusätzlich so genannte freie 
+		Radikale ab und bremst so die Zellalterung.</p>
+		<table>
+			<thead><th style="width: 30%"></th><th>Son Valls<span class="desktop"> 2017</span></th><th>EU Vorschrift</th></thead>
+			<tr><td>Polyphenole</td><td>Polyphenole</td><td>Polyphenole</td></tr>
+			<tr><td>freie Fettsäure</td><td>0,12 % &lt; 0,15%</td><td>&lt; 0,8%</td></tr>
+			<tr><td>Peroxide</td><td>&lt; 10 meq o2/kg</td><td>&lt; 20 meq o2/kg</td></tr>
+			<tr><td>K232</td><td>&lt; 1,7</td><td>&lt; 2,5</td></tr>
+			<tr><td>K270</td><td>&lt; 0,15</td><td>&lt; 0,22</td></tr>
+		</table>
+	</div>
+	<div class="entry" id="quellen">
+	<br><br><br>
+		<h1>BEZUGSQUELLEN:</h1>
+		<h2>Reif von der Insel in Ihre Nähe.<br>
+		Hier ist Son Valls Olivenöl erhältlich.</h2>
+		<div id="map"></div>
+		<div class="suppliers">
+			<div class="fader-cont" id="suppliers_cont">
+				<table id="suppliers"></table>
+				<div class="fader" id="suppliers_fader"></div>
+			</div>
+			<div class="fader-show" id="suppliers_more" onclick="show_all_suppliers(true)"><div>ALLE ANZEIGEN</div></div>
+			<div class="fader-show" id="suppliers_less" onclick="show_all_suppliers(false)"><div>WENIGER ANZEIGEN</div></div>
+		</div>
+		<div class="desktop"><br><br><br><br></div>
+	</div>
+	<div class="entry kontakt" id="kontakt">
+		<div class="desktop"><h1>KONTAKT:</h1></div><br>
+		<div>
+			Cariñoso Agricultura SL<br>
+			DO Núm. 843<br>
+			Altivo Agricultura SL<br>
+			DO Núm. 842<br>
+			Cami de Son Valls<br>
+			Porreres, Mallorca, España
+		</div>
+		<div>
+			Vertrieb:<br>
+			<br>
+			Altivo GmbH<br>
+			Zollamtstraße 7<br>
+			A-4020 Linz<br>
+			office@sonvalls.com
+		</div>
+		<div class="impressum"><a href="/impressum.html">IMPRESSUM</a></div>
+	</div>
+</div>
+
+</body>

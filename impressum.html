@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Son Valls</title>
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="styles.css" type="text/css" />
+	<script type="text/javascript" src="scripts.js"></script>
+	<script type="text/javascript" src="scripts/jquery.js"></script>
+</head>
+
+<body style="background-color:white">
+
+<div class="menu" align="center">
+	<div class="menubar desktop">
+		<a href="/#dasoil">Das Olivenöl</a>
+		<a href="/#diesorte">Die Sorte</a>
+		<a href="/#herkunft">Die Herkunft</a>
+		<a href="/#eigen">Eigenschaften</a>
+		<a href="/#quellen">Bezugsquellen</a>
+		<a href="/#kontakt">Kontakt</a>
+	</div>
+	<div class="menubar mobile">
+		<img class="arrow" src="images/arrow_back.svg" onclick="window.history.back()"></img>	
+	    <div class="rollup"  onclick="showmenu(true)">Menü</div>
+		<div class="rolldown">
+		    <div class="menuclose" onclick="showmenu(false)">Schliessen</div>
+			<div class="menucontent">
+				<a href="#dasoil" onclick="showmenu(false)">Das Olivenöl</a><br>
+				<a href="#diesorte" onclick="showmenu(false)">Die Sorte</a><br>
+				<a href="#herkunft" onclick="showmenu(false)">Die Herkunft</a><br>
+				<a href="#eigen" onclick="showmenu(false)">Eigenschaften</a><br>
+				<a href="#quellen" onclick="showmenu(false)">Bezugsquellen</a><br>
+				<a href="#kontakt" onclick="showmenu(false)">Kontakt</a>
+			</div>
+			<a href="/impressum.html" class="menufooter" onclick="showmenu(false)">Impressum</a>
+		</div>
+	</div>
+</div>
+
+<div class="content animated fadeInUpBig mobile">
+	<div class="entry" id="impressum">
+		<h2>Impressum</h2>
+		<table>
+			<thead><th></th><th></th></thead>
+			<tr><td>Inhaber:</td><td>Vorname Nachname</td></tr>
+			<tr><td>Firmenwortlaut:</td><td>Altivo GmbH</td></tr>
+			<tr><td>Gründungsjahr:</td><td>2017</td></tr>
+			<tr><td>Firmenbuchnummer:</td><td>FN000000</td></tr>
+			<tr><td>Firmengericht:</td><td>Landensgericht Linz</td></tr>
+		</table>
+		<br><br>
+	</div>
+</div>
+
+<div class="content desktop">
+	<div class="entry" id="impressum">
+		<h2 class="desktop">Impressum:</h2><br><br>
+		<table>
+			<thead><th></th><th></th></thead>
+			<tr><td>Inhaber:</td><td>Vorname Nachname</td></tr>
+			<tr><td>Firmenwortlaut:</td><td>Altivo GmbH</td></tr>
+			<tr><td>Gründungsjahr:</td><td>2017</td></tr>
+			<tr><td>Firmenbuchnummer:</td><td>FN000000</td></tr>
+			<tr><td>Firmengericht:</td><td>Landensgericht Linz</td></tr>
+		</table>
+	</div>
+	<div class="entry kontakt" id="kontakt">
+		<div><h1>KONTAKT:</h1></div><br>
+		<div>
+			Cariñoso Agricultura SL<br>
+			DO Núm. 843<br>
+			Altivo Agricultura SL<br>
+			DO Núm. 842<br>
+			Cami de Son Valls<br>
+			Porreres, Mallorca, España
+		</div>
+		<div>
+			Vertrieb:<br>
+			<br>
+			Altivo GmbH<br>
+			Zollamtstraße 7<br>
+			A-4020 Linz<br>
+			office@sonvalls.com
+		</div>
+		<div class="impressum"><a href="/impressum.html">IMPRESSUM</a></div>
+	</div>
+</div>
+
+</body>

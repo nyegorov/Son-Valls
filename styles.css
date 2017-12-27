@@ -1,0 +1,671 @@
+
+@font-face {
+    font-family: "chap";
+    src: url(fonts/ChapLight.woff);
+}
+
+@font-face {
+    font-family: "moderat";
+    src: url(fonts/Moderat-Regular.woff);
+}
+
+@font-face {
+    font-family: "moderat";
+    src: url(fonts/Moderat-Bold.woff);
+	font-weight: bold;
+}
+
+
+body, h1, h2 {
+	font-family: moderat, arial, sans-serif;
+	font-weight: 300;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: white;
+	color: black;
+	font-weight: 300;
+	padding: 0 26px 26px 26px;
+}
+
+thead {
+	letter-spacing: 4px;
+	text-transform: uppercase;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse; 
+}
+
+td, th {
+	padding: 30px 0;
+	border-bottom: 1px solid #D2D2D2;
+	color: black;
+}
+
+th {
+	padding: 20px 0;
+	text-align: left;
+	font-weight: 300;
+}
+
+.menu {
+	float: left;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	background: white;
+	color: black;
+	padding: 32px 0 29px;
+	overflow: hidden;
+	border-bottom: 1px solid #D2D2D2;
+	font-size: 10px;
+	line-height: 12px;
+	white-space: nowrap;
+	z-index: 9999;
+}
+
+.menu a {
+	padding: 0 15px;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 3px;
+	color: black;
+}
+
+.menu a:visited {
+	color: black;
+}
+
+.rollup {
+	overflow: hidden;
+	cursor: pointer;
+	padding: 15px 0;
+}
+
+.menuclose {
+	cursor: pointer;
+	border-bottom: 1px solid #D2D2D2;
+	padding: 15px 0;
+}
+
+.rolldown {
+	overflow: hidden;
+	position: relative;
+	height: 0;
+}
+
+.rolldown a {
+	font-family: chap, arial, sans-serif;
+	font-size: 14px;
+	letter-spacing: 4px;
+	line-height: 55px;
+}
+
+.menucontent {
+	position: relative;
+	top: calc(50% - 40px);
+	transform: translateY(-50%);	
+}
+
+.menufooter {
+	display: block;
+	border-top: 1px solid #D2D2D2;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: calc(100% - 30px);
+	text-align: center;
+	padding-top: 15px !important;
+	padding-bottom: 15px !important;
+	font-family: moderat, arial, sans-serif !important;
+	font-size: 9px !important;
+	line-height: 10px !important;
+}
+
+.desktop {
+	visibility: visible;
+	height: auto;
+	width: auto;
+}
+
+.mobile {
+	visibility: hidden;
+	height: 0;
+	width: 0;
+}
+
+.content {
+	overflow: hidden;
+}
+
+.content h1 {
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 7px;
+	display: inline-block;
+	border-bottom: 1px solid #727272;
+	margin-left: 165px;
+}
+
+.content h2 {
+	font-family: chap, arial, sans-serif;
+
+	font-size: 52px;
+	line-height: 58px;
+	padding-top: 35px;
+	word-wrap: break-word;
+}
+
+.entry > p {
+	font-size: 18px;
+	line-height: 22px;
+	padding: 50px 165px 50px 165px;
+}
+
+.content > img {
+	max-width: calc(98vw - 500px);
+	margin-top: 50px;
+	margin: 0 auto;
+	display: block;
+}
+
+.entry {
+	padding: 0 calc((100% - 960px) / 2);
+	overflow: hidden;
+	padding-top: 150px;
+}
+
+.gallery {
+	position: relative;
+	padding-top: 50px;
+}
+
+.gallery_nav img {
+	position: absolute;
+	top: 50%;
+	z-index: 999;
+}
+
+.gallery_nav .prev {
+	left: 40px;
+}
+
+.gallery_nav .next {
+	right: 40px;
+}
+
+
+#header {
+	padding: 70px 0;
+}
+
+#header h1 {
+	font-family: chap, arial, sans-serif;
+	font-size: 64px;
+	line-height: 84px;
+	letter-spacing: 0px;
+	text-align: center;
+	border-bottom: 0px;
+	padding: 0;
+	margin: 73px 0 0 0;
+	width: 100%;
+}
+
+#header h2 {
+	font-size: 22px;
+	line-height: 30px;
+	text-align: center;
+	padding: 0;
+	width: 100%;
+}
+
+#bottle {
+	max-width: 98vw;
+	margin: 0 0 -40px calc( (960px - 98vw) / 2 );
+}
+
+#dasoil img {
+	/*max-width: calc(98vw - 500px);*/
+	max-width: 100%;
+	margin-top: 50px;
+	margin: 0 auto;
+}
+
+#diesorte {
+	margin-top: -240px;
+}
+
+#diesorte2 {
+	position: relative;
+	height: 540px;
+}
+
+/* content */
+#diesorte2 div {
+	font-size: 18px;
+	line-height: 22px;
+	position: absolute;
+	left: calc((100% - 960px) / 2 + 165px);
+	width: calc(960px - 165px - 165px);
+	top: 0px;
+	padding: 0;
+	padding-top: 50px;
+	margin: 0;
+}
+
+/* background */
+#diesorte2 p + img {
+	position: absolute;
+	bottom: 0px;
+	height: 700px;
+	left: 0px;
+	width: 100%;
+}
+
+/* branch-bottom */
+#diesorte2 img + img {
+	position: absolute;
+	bottom: -100px;
+	right: -250px;
+	width: auto;
+	height: auto;
+}
+
+
+.gallery, #dasoil, #diesorte, #diesorte2, #kontakt {
+	background-color: black;
+	color: white;
+}
+
+#herkunft h1, #quellen h1, #eigen h1 {
+	border-bottom: 1px solid #D2D2D2;
+}
+
+#herkunft {
+	padding-top: 250px;
+	position: relative;
+	height: 743px;
+}
+
+/* background */
+#herkunft img {
+	position: absolute;
+	left: calc( (100% - 985px) / 2);
+	top: 200px;
+	width:  985px;
+	height: 783px;
+}
+
+#map {
+	margin: 60px 0;
+	width: 100%;
+    height: 750px;
+    background-color: grey;	
+}
+
+#impressum {
+	padding-top: 200px;
+	padding-bottom: 100px;
+	font-size: 18px;
+}
+
+.kontakt {
+	margin-top: 50px;
+	position: relative;
+	padding: 35px calc( (100% - 960px) / 2) 60px calc( (100% - 960px) / 2);
+	font-size: 18px;
+	line-height: 22px;
+	background-color: black;
+}
+
+.kontakt h1 {
+	margin-left: 0;
+}
+
+.kontakt a {
+	color: white;
+	text-decoration: none;
+}
+
+.kontakt a:visited {
+	color: white;
+}
+
+.kontakt div {
+	display: inline-block;
+	width: 330px;
+	padding: 35px 0 0 0;
+}
+
+.impressum {
+	cursor: pointer;
+	position: absolute;
+	color: white;
+	font-size: 10px;
+	line-height: 12px;
+	letter-spacing: 3px;
+	text-decoration: none;
+	text-align: right;
+	right: calc( (100% - 960px) / 2);
+	bottom: 60px;
+}
+
+.suppliers	{
+	position: relative;
+	margin-bottom: 90px;
+}
+
+.fader-cont {
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	max-height: 530px;
+	overflow: hidden;
+}
+
+.fader {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0px;
+	width: 100%;
+	height: 530px;
+	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 30%, rgba(255,255,255,1) 100%);
+	pointer-events: none;
+} 
+
+.fader-show {
+	position: absolute;
+	bottom: -90px;
+	right: 0;
+}
+
+.fader-show div {
+	padding: 15px;
+	font-size: 14px;
+	letter-spacing: 7px;
+	border: 1px solid #D2D2D2;
+	cursor: pointer;
+}
+
+.arrow {
+	width: 40px;
+	float: left;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.noscroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1024px) { 
+	body {
+		padding: 0 20px 20px 20px;
+	}
+
+	.content h1 {
+		margin-left: 137px;
+	}
+
+	.entry {
+		padding-left:  calc((100% - 800px) / 2);
+		padding-right: calc((100% - 800px) / 2);
+	}
+
+	.entry > p {
+		padding-left: 137px;
+	}
+
+	#bottle {
+		margin-left: calc( (800px - 98vw) / 2 );
+	}
+
+	#dasoil img {
+		max-width: 80%;
+	}
+
+	#diesorte2 div {
+		left: calc((100% - 800px) / 2 + 137px);
+		width: calc(800px - 137px - 137px);
+	}
+
+	/* branch-bottom */
+	#diesorte2 img + img {
+		right: -300px;
+		bottom: 40px;
+		width: 90%;
+	}
+
+	#herkunft img {
+		left: calc( (100% - 860px) / 2);
+		width:  860px;
+	}
+
+	.kontakt {
+		padding-left:  calc( (100% - 800px) / 2);
+		padding-right: 0px;
+	}
+
+	.kontakt h1 {
+		margin-left: 0;
+	}
+
+	.kontakt div {
+		width: 400px;
+	}
+
+	.impressum {
+		right: calc( (100% - 800px) / 2);
+	}
+
+}
+
+@media screen and (max-width: 768px) { 
+
+	body {
+		padding: 0;
+	}
+
+	table {
+		font-size: 9pt;
+	}
+
+	thead {
+		letter-spacing: normal;
+	}
+	
+	td {
+		padding: 15px 0;
+	}
+	
+	.menu {
+		padding: 0;
+		font-size: 9px;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		z-index: 999;
+	}
+
+	.gallery_nav {
+		display: none;
+	}
+	
+	.content h1 {
+		font-size: 9px;
+		line-height: 11px;
+		letter-spacing: 4px;
+		margin-left: 0;
+	}
+	
+	.content h2 {
+		padding-top: 15px;
+		padding-left: 0;
+		font-size: 32px;
+		line-height: 37px;
+	}
+	
+	.content p {
+		padding: 15px 0 0;
+		font-size: 12px;
+		line-height: 16px;
+	}
+	
+	.content > img {
+		max-width: calc(98vw + 70px);
+		margin: -20px 0 0 -60px;
+		display: block;
+	}
+	
+	.entry {
+		padding: 60px 15px 0;
+	}
+	
+	#header {
+		padding: 40px 0;
+	}
+	
+	#header h1 {
+		margin-top: 40px;
+		font-size: 35px;
+		line-height: 47px;
+	}
+	
+	#header h2 {
+		font-size: 11px;
+		line-height: 14px;
+	}
+	
+	#bottle {
+		max-width: calc(98vw + 320px);
+		margin: 0px 0px -40px -160px;
+	}
+
+	#dasoil img {
+		max-width: 100%;
+	}
+	
+	#diesorte {
+		margin-top: -115px;
+	}
+	
+	#diesorte2 {
+		position: auto;
+		height: 160px;
+	}
+	
+	#diesorte2 div {
+		left: 15px;
+		width: calc(100% - 30px);
+		padding-top: 0px;
+	}
+	
+	#diesorte2 img {
+		height: 0;
+		visibility: hidden;
+	}
+	
+	#herkunft {
+		padding-top: 50px;
+		position: relative;
+		height: calc(100vw * 783 / 985 + 180px);
+/*		height: auto;*/
+	}
+	
+	/* background */
+	#herkunft img {
+		position: absolute;
+		left: 15px;
+		top: 240px;
+		width:  calc(98vw - 30px);
+		height: auto;
+	}
+	
+	#map {
+		height: 250px;
+		margin: 30px 0;
+	}
+	
+	#impressum {
+		padding-top: 100px;
+		padding-bottom: 10px;
+		font-size: 9px;
+	}
+
+	#impressum h2 {
+		text-align: center;
+	}
+
+	.fader-show {
+		left: 50%;
+		text-align: center;		
+		bottom: -70px;
+	}
+	
+	.fader-show div {
+		position: relative;
+		left: -50%;
+		padding: 15px;
+		font-size: 9px;
+		letter-spacing: 4px;
+		border: 1px solid #D2D2D2;
+		cursor: pointer;
+	}
+	
+	.fader-cont {
+		max-height: 344px;
+	}
+	
+	.fader {
+		height: 344px;
+	} 
+	
+	.kontakt {
+		padding: 8px 15px 0;
+		font-size: 9px;
+		line-height: 11px;
+	}
+	
+	.kontakt h1 {
+		margin-left: 0;
+	}
+	
+	.kontakt div {
+		display: inline-block;
+		padding: 0;
+		width: calc(50% - 6px);
+	}
+	
+	.impressum {
+		display: block;
+		position: static;
+		letter-spacing: 3px;
+		border-top: 1px solid #727272;	
+		margin: 50px 0 0 -15px;
+		padding: 15px 0 15px !important;
+		width: calc(100% + 30px) !important;
+		text-align: center;
+	}
+	
+	.desktop {
+		visibility: hidden;
+		height: 0;
+		width: 0;
+	}
+	
+	.mobile {
+		visibility: visible;
+		height: auto;
+		width: auto;
+	}
+	
+}
