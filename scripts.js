@@ -46,7 +46,7 @@ function initMap() {
 function add_marker(infowindow, geocoder, supplier) {
 	geocoder.geocode( { 'address': supplier.address }, function(results, status) {
 		if(status == google.maps.GeocoderStatus.OK)	{
-		var marker = new google.maps.Marker({ map: map, position: results[0].geometry.location, icon: 'images/google_maps_location.svg' });			
+			var marker = new google.maps.Marker({ map: map, position: results[0].geometry.location, icon: 'images/google_maps_location.svg' });			
 			google.maps.event.addListener(marker, 'click', function() { infowindow.setContent(supplier.name); infowindow.open(map, this); });
 		}	
 	});
@@ -68,7 +68,7 @@ jQuery.ajax({ url: 'suppliers.json', type: 'GET', success: function(data) {
 		html += '<td><a href="' + s.url + '"><img src="images/arrow.svg"></img></a></td>';
 		html += '</tr>';
 
-		add_marker(infowindow, geocoder, s);
+		if(s.address)	add_marker(infowindow, geocoder, s);
 	}
 
 	jQuery('#suppliers_less').hide();

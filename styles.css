@@ -17,6 +17,8 @@
 
 
 body, h1, h2 {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	font-family: moderat, arial, sans-serif;
 	font-weight: 300;
 	margin: 0;
@@ -57,10 +59,11 @@ th {
 	position: fixed;
 	top: 0px;
 	left: 0px;
-	width: 100%;
+	width: calc(100% - 52px);
 	background: white;
 	color: black;
 	padding: 32px 0 29px;
+	margin: 0 26px;
 	overflow: hidden;
 	border-bottom: 1px solid #D2D2D2;
 	font-size: 10px;
@@ -206,8 +209,8 @@ th {
 
 #header h1 {
 	font-family: chap, arial, sans-serif;
-	font-size: 64px;
-	line-height: 84px;
+	font-size: 62px;
+	line-height: 72px;
 	letter-spacing: 0px;
 	text-align: center;
 	border-bottom: 0px;
@@ -217,8 +220,8 @@ th {
 }
 
 #header h2 {
-	font-size: 22px;
-	line-height: 30px;
+	font-size: 19px;
+	line-height: 25px;
 	text-align: center;
 	padding: 0;
 	width: 100%;
@@ -413,6 +416,11 @@ th {
 		padding: 0 20px 20px 20px;
 	}
 
+	.menu {
+		width: calc(100% - 40px);
+		margin: 0 20px;
+	}
+
 	.content h1 {
 		margin-left: 137px;
 	}
@@ -494,6 +502,8 @@ th {
 		letter-spacing: 4px;
 		text-transform: uppercase;
 		z-index: 999;
+		width: 100%;
+		margin: 0;
 	}
 
 	.gallery_nav {
