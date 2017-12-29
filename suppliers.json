@@ -1,21 +1,6 @@
 {
 	"suppliers": [
 		{ 
-			"name":    "Interspar Wels", 
-			"address": "Oberfeldstraße 91 • 4600 Wels • Österreich", 
-			"url":     "https://www.google.com/maps/place/Oberfeldstra%C3%9Fe+91,4600+Wels,Austria" 
-		}, 
-		{ 
-			"name":    "Patrick’s Feinkost", 
-			"address": "Bethlehemstraße 1D • 4020 Linz • Österreich", 
-			"url":     "https://www.google.com/maps/place/Bethlehemstra%C3%9Fe+1D,4020+Linz,Austria" 
-		},
-		{ 
-			"name":    "HORST Wohnküche", 
-			"address": "Mozartstraße 19 • 4020 Linz • Österreich", 
-			"url":     "https://www.google.com/maps/place/Mozartstra%C3%9Fe+19,4020+Linz,Austria" 
-		},
-		{ 
 			"name":    "Alte Metzgerei", 
 			"address": "Herrenstraße 5 • 4020 Linz • Österreich", 
 			"url":     "https://www.google.com/maps/place/Herrenstra%C3%9Fe+5,4020+Linz,Austria" 
@@ -27,7 +12,7 @@
 		},
 		{ 
 			"name":    "Fet a Soller", 
-			"address": "", 
+			"address": "www.fetasoller.com", 
 			"url":     "http://www.fetasoller.com" 
 		}
 	]
