@@ -190,6 +190,7 @@ th {
 
 .gallery_nav img {
 	position: absolute;
+	cursor: pointer;
 	top: 50%;
 	z-index: 999;
 }
@@ -202,6 +203,17 @@ th {
 	right: 40px;
 }
 
+.gallery_item {
+	max-width: 98vw;
+	margin: 0 0 -40px calc( (960px - 98vw) / 2 );
+/*	visibility: hidden;*/
+	display: none;
+}
+
+.gallery_active {
+/*	visibility: visible;*/
+	display: block;
+}
 
 #header {
 	padding: 70px 0;
@@ -225,11 +237,6 @@ th {
 	text-align: center;
 	padding: 0;
 	width: 100%;
-}
-
-#bottle {
-	max-width: 98vw;
-	margin: 0 0 -40px calc( (960px - 98vw) / 2 );
 }
 
 #dasoil img {
@@ -510,6 +517,11 @@ th {
 		display: none;
 	}
 	
+	.gallery_item {
+		max-width: calc(98vw + 320px);
+		margin: 0px 0px -40px -160px;
+	}
+
 	.content h1 {
 		font-size: 9px;
 		line-height: 11px;
@@ -555,11 +567,6 @@ th {
 		line-height: 14px;
 	}
 	
-	#bottle {
-		max-width: calc(98vw + 320px);
-		margin: 0px 0px -40px -160px;
-	}
-
 	#dasoil img {
 		max-width: 100%;
 	}
