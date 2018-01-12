@@ -1,4 +1,6 @@
 var map;
+var gal_index;
+var gal_items;
 
 function initMap() {
 	var uluru = {lat: 48.845, lng: 13.343};	//48.8450723,13.342773,7.42z
@@ -114,3 +116,21 @@ function show_all_suppliers(show) {
 		jQuery('#suppliers_fader').show();
 	}
 }
+
+function initGallery(num_items)	{
+	gal_index = 1;
+	gal_items = num_items;
+	show_gal(1);
+}
+
+function show_gal(next) {
+	if(next < 1 | next > gal_items)	return;
+	jQuery('#gal' + gal_index).removeClass('gallery_active');
+	jQuery('#gal' + next).addClass('gallery_active');
+	gal_index = next;
+}
+
+function prev_gal() { show_gal(gal_index-1); }
+function next_gal() { show_gal(gal_index+1); }
+
+initGallery(3);
