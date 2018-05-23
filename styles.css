@@ -215,6 +215,92 @@ th {
 	display: block;
 }
 
+		#swiper { padding-top: 150px; }
+
+        .swiper {
+            overflow: hidden;
+            position: relative;
+			height: 888px;
+            /*border: 1px solid black;*/
+        }
+        .swiper-images {
+            float: left;
+            display: inline;
+			top: 0;
+            padding: 0;
+            margin: 0;
+            height: 588px;
+            width: 15371px;
+            transition-property: transform;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-out;
+            /*apply a transform to kick in the hardware acceleration.  Without this, the first
+            time we add the transform you get odd rendering of the divs (half missing) */
+            transform: translate(0, 0);
+        }
+        .swiper-images div {
+			display: inline-block;
+            padding: 0;
+            margin: 0;
+			top: 0;
+            width: 960px;
+            /*apply a transform to kick in the hardware acceleration.  Without this, the first
+            time we add the transform you get odd rendering of the divs (half missing) */
+            transform: translate(0, 0);
+        }
+        .swiper-images img {
+            padding: 0;
+            margin: 0;
+            width: 960px;
+            height: 588px;
+            /*apply a transform to kick in the hardware acceleration.  Without this, the first
+            time we add the transform you get odd rendering of the divs (half missing) */
+            /*transform: translate(0, 0);*/
+        }
+
+        .swiper-images article {
+            padding: 50px 165px;
+			height: 100px;
+			margin: 0;
+        }
+
+		.swiper_nav img {
+			position: absolute;
+			cursor: pointer;
+			top: 50%;
+			z-index: 999;
+		}
+
+		.swiper_nav .prev {
+			left: 40px;
+		}
+
+		.swiper_nav .next {
+			right: 40px;
+		}
+
+		.swiper-show {
+			position: absolute;
+			bottom: 16px;
+			right: 0;
+		}
+
+		.swiper-show div {
+			padding: 15px;
+			font-size: 14px;
+			letter-spacing: 7px;
+			border: 1px solid #D2D2D2;
+			cursor: pointer;
+		}
+
+		.swiper-bottom {
+			margin-top: 20px;
+			padding-top: 36px;
+			border-top: 1px solid #D2D2D2;
+			position: relative;
+			height: 50px;
+		}
+
 #header {
 	padding: 70px 0;
 }
@@ -287,7 +373,7 @@ th {
 }
 
 
-.gallery, #dasoil, #diesorte, #diesorte2, #kontakt {
+#gallery, #dasoil, #diesorte, #diesorte2, #kontakt {
 	background-color: black;
 	color: white;
 }
@@ -483,6 +569,9 @@ th {
 		right: calc( (100% - 800px) / 2);
 	}
 
+	.swiper-images     { width: 6440px; }
+	.swiper-images div { width: 800px; height: 490px; }
+	.swiper-images img { width: 800px; height: 490px; }
 }
 
 @media screen and (max-width: 768px) { 
@@ -672,6 +761,10 @@ th {
 		width: calc(100% + 30px) !important;
 		text-align: center;
 	}
+
+	.swiper-images     { width: 6440px; }
+	.swiper-images div { width: calc(98vw - 30px); height: calc((98vw - 30px) * 1200 / 1920); }
+	.swiper-images img { width: calc(98vw - 30px); height: calc((98vw - 30px) * 1200 / 1920); }
 	
 	.desktop {
 		visibility: hidden;

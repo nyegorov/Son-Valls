@@ -7,6 +7,8 @@
 	<title>Son Valls</title>
 	<link rel="stylesheet" href="styles.css" type="text/css" />
 	<script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/jquery.touchSwipe.min.js"></script>
+	<script type="text/javascript" src="scripts/swipe.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnguGGHU8WbMPWVP2_-UwUUFpgCTWpP7A"></script>
 	<script type="text/javascript" src="scripts.js"></script>
     <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnguGGHU8WbMPWVP2_-UwUUFpgCTWpP7A&callback=initMap"></script>-->
@@ -46,7 +48,7 @@
 		<h2>Oli d’Oliva Verge Extra</h2>
 	</div>
 
-	<div class="entry gallery">
+	<div class="entry gallery" id="gallery">
 		<!--<div id="bottle" ><img src="images/bottle.jpg"></img></div>-->
 		<div class="gallery_nav">
 			<img class="prev" src="images/arrow_gallery_left.svg" onclick="prev_gal()"></img>
@@ -114,6 +116,41 @@
 			<tr><td>K270</td><td>&lt; 0,15</td><td>&lt; 0,22</td></tr>
 		</table>
 	</div>
+	
+	<div class="entry gallery" id="swiper">
+		<div class="swiper_nav desktop">
+			<img class="prev" src="images/arrow_gallery_left.svg" onclick="previousImage()"></img>
+			<img class="next" src="images/arrow_gallery.svg" onclick="nextImage()"></img>
+		</div>
+		<div class="swiper">
+	        <div class="swiper-images">
+				<table>
+				<div><img src="images/01_sonvalls.jpg"/><article>bla</article></div>
+        	    <div><img src="images/02_sonvalls.jpg"/><article>Grüne Pracht. Während die Oliven reifen, ändern sie ihre Farbe. Der beste Zeitpunkt ihrer Ernte ist, bevor die Oliven von Gelb-Grün ins Dunkel-Violett gehen. Nur dann bleiben die wichtigen pflanzlichen Inhaltsstoffe zur Gänze erhalten und das Olivenöl punktet mit besonders aromatischem Geschmack. Dieser entsteht durch sogenannte Polyphenole – sekundäre Pflanzenwirkung mit bioaktiver Wirkung: sie binden in unseren Körpern Freie Radikale, die Krankheiten begünstigen und den Alterungsprozess vorantreiben.</article></div>
+            	<div><img src="images/03_sonvalls.jpg"/><p>Sortenreinheit: Für ein starkes Olivenöl verwendet man nur eine Sorte, die dem Öl seinen charakteristischen Geschmack verleiht. Bei uns ist dies die Arbequina – kaum größer als eine Haselnuss und fein ausbalancierter Frucht und Schärfe.</p></div>
+            	<div><img src="images/04_sonvalls.jpg"/><p>Genügsam. Olivenbäume bevorzugen mediterranes Klima, dabei sind ihre Ansprüche nicht groß: der Boden darf mager und kalkhaltig sein, sie kommen auch mit geringem Niederschlag aus. Die Erntezeit beginnt im November.</p></div>
+            	<div><img src="images/05_sonvalls.jpg"/><p>Oliven müssen nach der Ernte schnell und einwandfrei zur Mühle, damit ihre wichtigen sekundären Pflanzenstoffe erhalten werden. Innerhalb von acht Stunden sollte dies passieren, der Spitzenwert liegt unter vier Stunden. Mit modernsten technischen Anlagen erreichen wir diese Qualität.</p></div>
+            	<div><img src="images/06_sonvalls.jpg"/><p>Niedrige Temperatur für hohe Qualität. Wir setzen bei der Gewinnung des Öls auf das schonende Verfahren der Kaltextraktion. Im Gegensatz zur Kaltpressung wird dabei das Olivenöl mittels Zentrifugen aus der Olivenpaste geschleudert. Wichtig: die Temperatur darf bei dem Prozess 27 °C nicht übersteigen, um die gesundheitsfördernde Wirkung zu sichern.</p></div>
+            	<div><img src="images/07_sonvalls.jpg"/><p>Im Herzen von Mallorca herrschen ideale Bedingungen für Olivenbäume. Und sie danken es, mit Öl von höchster Qualität – ein Fest für die Sinne. Sonn Valls Natives Olivenöl erster Güteklasse duftet herrlich frisch nach Gras, grünen Tomaten und Artischocken.</p></div>
+            	<div><img src="images/08_sonvalls.jpg"/><p>Jahrtausende alte Tradition. Wir setzen die Kunst der Olivenöl-Gewinnung fort. Die Verfahren sind moderner geworden, die Herangehensweise ist die gleiche geblieben: Demut vor der Natur, Achtsamkeit und Leidenschaft bei jedem Arbeitsschritt.</p></div>
+
+<!--				<div><img src="images/01_sonvalls.jpg"/><p>Silbrig-grün glänzenden Blätter, knorrige Stämme: Olivenbäume gehören zu unseren ältesten Kulturpflanzen. Es gibt 40 bis 50 Arten und ihre Früchte, die Oliven, haben erwiesenermaßen zahlreiche positive Auswirkungen auf unserer Gesundheit.</p></div>
+        	    <div><img src="images/02_sonvalls.jpg"/><p>Grüne Pracht. Während die Oliven reifen, ändern sie ihre Farbe. Der beste Zeitpunkt ihrer Ernte ist, bevor die Oliven von Gelb-Grün ins Dunkel-Violett gehen. Nur dann bleiben die wichtigen pflanzlichen Inhaltsstoffe zur Gänze erhalten und das Olivenöl punktet mit besonders aromatischem Geschmack. Dieser entsteht durch sogenannte Polyphenole – sekundäre Pflanzenwirkung mit bioaktiver Wirkung: sie binden in unseren Körpern Freie Radikale, die Krankheiten begünstigen und den Alterungsprozess vorantreiben.</p></div>
+            	<div><img src="images/03_sonvalls.jpg"/><p>Sortenreinheit: Für ein starkes Olivenöl verwendet man nur eine Sorte, die dem Öl seinen charakteristischen Geschmack verleiht. Bei uns ist dies die Arbequina – kaum größer als eine Haselnuss und fein ausbalancierter Frucht und Schärfe.</p></div>
+            	<div><img src="images/04_sonvalls.jpg"/><p>Genügsam. Olivenbäume bevorzugen mediterranes Klima, dabei sind ihre Ansprüche nicht groß: der Boden darf mager und kalkhaltig sein, sie kommen auch mit geringem Niederschlag aus. Die Erntezeit beginnt im November.</p></div>
+            	<div><img src="images/05_sonvalls.jpg"/><p>Oliven müssen nach der Ernte schnell und einwandfrei zur Mühle, damit ihre wichtigen sekundären Pflanzenstoffe erhalten werden. Innerhalb von acht Stunden sollte dies passieren, der Spitzenwert liegt unter vier Stunden. Mit modernsten technischen Anlagen erreichen wir diese Qualität.</p></div>
+            	<div><img src="images/06_sonvalls.jpg"/><p>Niedrige Temperatur für hohe Qualität. Wir setzen bei der Gewinnung des Öls auf das schonende Verfahren der Kaltextraktion. Im Gegensatz zur Kaltpressung wird dabei das Olivenöl mittels Zentrifugen aus der Olivenpaste geschleudert. Wichtig: die Temperatur darf bei dem Prozess 27 °C nicht übersteigen, um die gesundheitsfördernde Wirkung zu sichern.</p></div>
+            	<div><img src="images/07_sonvalls.jpg"/><p>Im Herzen von Mallorca herrschen ideale Bedingungen für Olivenbäume. Und sie danken es, mit Öl von höchster Qualität – ein Fest für die Sinne. Sonn Valls Natives Olivenöl erster Güteklasse duftet herrlich frisch nach Gras, grünen Tomaten und Artischocken.</p></div>
+            	<div><img src="images/08_sonvalls.jpg"/><p>Jahrtausende alte Tradition. Wir setzen die Kunst der Olivenöl-Gewinnung fort. Die Verfahren sind moderner geworden, die Herangehensweise ist die gleiche geblieben: Demut vor der Natur, Achtsamkeit und Leidenschaft bei jedem Arbeitsschritt.</p></div>-->
+			</div>
+        </div>
+		<div class="swiper-bottom">
+			<div><span id="swiper-current">1</span>&nbsp;/&nbsp;<span id="swiper-total">1</span></div>
+			<div class="swiper-show" id="text_more" onclick="swiper_show_more(true)"><div>MEHR ANZEIGEN</div></div>
+			<div class="swiper-show" id="text_less" onclick="swiper_show_more(false)"><div>WENIGER ANZEIGEN</div></div>
+		</div>
+	</div>
+
 	<div class="entry" id="quellen">
 	<br><br><br>
 		<h1>BEZUGSQUELLEN:</h1>
