@@ -32,7 +32,7 @@ body {
 	padding: 0 26px 26px 26px;
 }
 
-thead {
+th {
 	letter-spacing: 4px;
 	text-transform: uppercase;
 }
@@ -220,7 +220,6 @@ th {
         .swiper {
             overflow: hidden;
             position: relative;
-			height: 888px;
             /*border: 1px solid black;*/
         }
         .swiper-images {
@@ -229,8 +228,7 @@ th {
 			top: 0;
             padding: 0;
             margin: 0;
-            height: 588px;
-            width: 15371px;
+            width: 7710px;
             transition-property: transform;
             transition-duration: 0.5s;
             transition-timing-function: ease-out;
@@ -238,36 +236,32 @@ th {
             time we add the transform you get odd rendering of the divs (half missing) */
             transform: translate(0, 0);
         }
-        .swiper-images div {
-			display: inline-block;
-            padding: 0;
-            margin: 0;
-			top: 0;
-            width: 960px;
-            /*apply a transform to kick in the hardware acceleration.  Without this, the first
-            time we add the transform you get odd rendering of the divs (half missing) */
-            transform: translate(0, 0);
-        }
-        .swiper-images img {
-            padding: 0;
-            margin: 0;
-            width: 960px;
-            height: 588px;
-            /*apply a transform to kick in the hardware acceleration.  Without this, the first
-            time we add the transform you get odd rendering of the divs (half missing) */
-            /*transform: translate(0, 0);*/
-        }
 
-        .swiper-images article {
-            padding: 50px 165px;
-			height: 100px;
-			margin: 0;
+        .swiper-images img {
+			display: block;
+            padding: 0;
+            margin: 0;     
+           	width: 960px;
+            height: 588px;
+        }
+		
+        .swiper-images td {
+			padding: 0;
+			border: 0;
+			vertical-align: top;
+		}
+
+        .swiper-images p {
+			overflow: hidden;
+			width: 630px;
+            padding: 0px 165px;
+			margin: 40px 0;
         }
 
 		.swiper_nav img {
 			position: absolute;
 			cursor: pointer;
-			top: 50%;
+			top: 40%;
 			z-index: 999;
 		}
 
@@ -293,13 +287,38 @@ th {
 			cursor: pointer;
 		}
 
+		#text_none div {
+			color: #D2D2D2;
+		}
+
 		.swiper-bottom {
-			margin-top: 20px;
+			margin-top: 0px;
 			padding-top: 36px;
 			border-top: 1px solid #D2D2D2;
 			position: relative;
 			height: 50px;
 		}
+
+		.swiper-fader-cont {
+			display: block;
+			position: relative;
+			margin: 0;
+			padding: 0;
+			max-height: 160px;
+			overflow: hidden;
+		}
+
+		.swiper-fader {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0px;
+			width: 100%;
+			height: 160px;
+			background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 78%, rgba(255,255,255,1) 100%);
+			pointer-events: none;
+		} 
 
 #header {
 	padding: 70px 0;
@@ -410,6 +429,20 @@ th {
 	font-size: 18px;
 }
 
+#daten p {
+	font-size: 16px;
+	font-weight: normal;
+	padding: 10px 0;
+}
+
+#daten ol > li {
+	font-size: 24px;
+	font-weight: bold;
+	padding-top: 20px;
+}
+
+#daten ul { list-style-type: disc; }
+
 .kontakt {
 	margin-top: 50px;
 	position: relative;
@@ -504,6 +537,38 @@ th {
   overflow: hidden;
 }
 
+.gdpr {
+	display: none;
+	position:fixed;
+	float: bottom;
+	bottom: 0px;
+	background: white;
+	border-top: 1px solid #D2D2D2;
+	width: calc(100% - 2 * 26px);
+}
+
+.gdpr table {
+	margin-left: -20px;
+	width: calc(100% + 40px);
+}
+
+.gdpr td {
+	padding: 20px;
+}
+
+.gdpr a {
+	text-decoration: none;
+	color: black;	
+}
+
+.gdpr-ok {
+	display: inline-block;
+	padding: 10px 20px;
+	border: 1px solid #D2D2D2;
+	letter-spacing: 4px;
+	cursor: pointer;
+}
+
 @media screen and (max-width: 1024px) { 
 	body {
 		padding: 0 20px 20px 20px;
@@ -569,9 +634,11 @@ th {
 		right: calc( (100% - 800px) / 2);
 	}
 
-	.swiper-images     { width: 6440px; }
-	.swiper-images div { width: 800px; height: 490px; }
+	.gdpr {	width: calc(100% - 2 * 20px); }
+
+	.swiper-images     { width: 6432px; }
 	.swiper-images img { width: 800px; height: 490px; }
+    .swiper-images p   { width: 526px; padding: 0px 137px; }
 }
 
 @media screen and (max-width: 768px) { 
@@ -762,9 +829,14 @@ th {
 		text-align: center;
 	}
 
-	.swiper-images     { width: 6440px; }
-	.swiper-images div { width: calc(98vw - 30px); height: calc((98vw - 30px) * 1200 / 1920); }
-	.swiper-images img { width: calc(98vw - 30px); height: calc((98vw - 30px) * 1200 / 1920); }
+	.gdpr {	
+		padding: 0 15px;
+		width: calc(100% - 2 * 15px); 
+	}
+
+	.swiper-images     { width: calc((100vw - 30px + 4px) * 8); }
+	.swiper-images img { width: calc(100vw - 30px); height: calc((100vw - 30px) * 1200 / 1920); }
+    .swiper-images p   { width: calc(100vw - 30px); padding: 0;}
 	
 	.desktop {
 		visibility: hidden;

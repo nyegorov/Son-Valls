@@ -2,6 +2,19 @@ var map;
 var gal_index;
 var gal_items;
 
+// возвращает cookie с именем name, если есть, если нет, то undefined
+function getCookie(name) {
+  var matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
+function setCookie(name, value) {
+  value = encodeURIComponent(value);
+  document.cookie = name + "=" + value;
+}
+
 function initMap() {
 	var uluru = {lat: 48.845, lng: 13.343};	//48.8450723,13.342773,7.42z
 	var styles = [
@@ -82,6 +95,7 @@ jQuery.ajax({ url: 'suppliers.json', type: 'GET', success: function(data) {
 
 	suppliers.innerHTML = html;
 	jQuery('#quellen').show();
+	updateExpandButton();
 }});
 
 function showmenu(show)	{
@@ -132,5 +146,9 @@ function show_gal(next) {
 
 function prev_gal() { show_gal(gal_index-1); }
 function next_gal() { show_gal(gal_index+1); }
+
+function gdpr_confirm() { setCookie("gdpr_ok", "1"); $(".gdpr").hide();	}
+
+window.addEventListener("load", function() { if(getCookie("gdpr_ok") != "1") $(".gdpr").show(); });
 
 initGallery(3);
