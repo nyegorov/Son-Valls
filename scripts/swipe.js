@@ -27,7 +27,7 @@ $(function () {
  * end : we animate to the next image
  */
 function swipeStatus(event, phase, direction, distance) {
-	IMG_WIDTH = Number.parseInt($('.swiper-images img').css('width')) + 4;
+	IMG_WIDTH = parseInt($('.swiper-images img').css('width'), 10) + 4;
     //If we are moving before swipe, and we are going L or R in X mode, or U or D in Y mode then drag.
     if (phase == "move" && (direction == "left" || direction == "right")) {
         var duration = 0;
@@ -47,14 +47,14 @@ function swipeStatus(event, phase, direction, distance) {
     }
 }
 function previousImage() {
-	IMG_WIDTH = Number.parseInt($('.swiper-images img').css('width')) + 4;
+	IMG_WIDTH = parseInt($('.swiper-images img').css('width'), 10) + 4;
 	//console.log('img width:   ' + IMG_WIDTH);
     currentImg = Math.max(currentImg - 1, 0);
     scrollImages(IMG_WIDTH * currentImg, speed);
 	txt_current.text(currentImg+1);
 }
 function nextImage() {
-	IMG_WIDTH = Number.parseInt($('.swiper-images img').css('width')) + 4;
+	IMG_WIDTH = parseInt($('.swiper-images img').css('width'), 10) + 4;
 	//console.log('img width:   ' + IMG_WIDTH);
     currentImg = Math.min(currentImg + 1, maxImages - 1);
     scrollImages(IMG_WIDTH * currentImg, speed);
@@ -66,7 +66,7 @@ function nextImage() {
 function updateExpandButton()	{
 
 	text_h = $('#swiper_text_' + (currentImg+1)).height();
-	console.log('text height:   ' + text_h);
+	//console.log('text height:   ' + text_h);
 
 	if(expanded) {
 		$('#text_more').hide();
